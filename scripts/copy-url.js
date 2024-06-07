@@ -7,9 +7,9 @@ linkCopy.addEventListener("click", copyURL);
     const error = document.getElementById('site_notice_error');
     navigator.clipboard.writeText(url).then(function() {
       popup.classList.add('show');
-      setTimeout(() => {popup.classList.remove('show');}, 1200);
+      setTimeout(() => {popup.classList.remove('show');}, 3200);
     }, function() {
       error.classList.add('show');
-      setTimeout(() => {error.classList.remove('show');}, 1200);
+      setTimeout(() => {error.classList.remove('show');}, 3200);
     });
   }
