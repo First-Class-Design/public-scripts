@@ -14,4 +14,4 @@ function get_text(el) {
 var words = get_text(document.querySelector('.page_rt')); // Change to the class of the designated content area.
 var count = words.split(' ').length;
 
-document.getElementById('readTime').innerHTML = Math.round(count / 200).toFixed(); // Change to the ID of the output HTML element. Should be changed to document.querySelector('.readTimerSpan') ideally.
+document.querySelector('.readTimerSpan').innerHTML = Math.round(count / 200).toFixed(); // Change to the class of the output HTML element.
