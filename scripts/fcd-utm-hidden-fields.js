@@ -1,12 +1,15 @@
 var queryString = window.location.search;
 console.log(queryString);
-// ?utm_source=facebook&utm_medium=post&utm_campaign=yourname
+// ?utm_source=XXXXX&utm_medium=post&utm_campaign=yourname&utm_term=keyword,keyword+two&utm_content=text+ad.footer+link
+// Fathom Analytics has a fantastic guide. See: https://usefathom.com/blog/utms
 var URLSearchParams_wb = new URLSearchParams(queryString);
 
 const utmParameters = [
   "utm_source", // Class name of input field.
   "utm_medium", // Class name of input field.
-  "utm_campaign" // Class name of input field.
+  "utm_campaign", // Class name of input field.
+  "utm_term", // Class name of input field.
+  "utm_content" // Class name of input field.
 ];
 
 
