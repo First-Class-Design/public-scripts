@@ -1,0 +1,449 @@
+/*!
+Theme Name: CBD
+Theme URI: https://www.cbwebsitedesign.co.uk/
+Author: Creative Brand Design
+Author URI: https://www.cbwebsitedesign.co.uk/
+Description: Creative Brand Design
+Version: 5.9
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cbd
+*/
+
+.smartWidget *,
+.smartWidget *:focus,
+.smartWidget *:active {
+	outline: none;
+	outline: 0;
+	outline-offset: -2px;
+	-o-transform: rotate(0);
+}
+@media screen and (max-width: 991px) {
+	.srSearchForm {
+		width: 100%;
+	}
+	tr.srJobListJobEven, tr.srJobListJobOdd {
+		flex: 1 1 33.333%!important;
+	}
+}
+@media screen and (max-width: 767px) {
+	.srJobList > tbody {
+		flex-direction: column;
+	}
+	tr.srJobListJobEven, tr.srJobListJobOdd {
+		flex: 0 1 auto!important;
+	}
+}
+
+.smartWidget *::-moz-focus-inner {
+	border: none;
+}
+
+.srJobList {
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: auto;
+	height: auto;
+	border-collapse: separate;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+.srJobList > tbody {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+}
+.srJobList th, td {
+	padding: 0;
+}
+
+.srJobList .srJobListTitles * {
+	margin: 0;
+	border: none;
+	background: var(--_themes---colours--grey-2) none;
+	color: var(--_themes---colours--primary);
+	text-align: left;
+	font-weight: 600;
+}
+
+nobr {
+	padding: 0 !important;
+	background: transparent none !important;
+}
+.srJobList .srJobListJobEven * {
+	border: none;
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: left;
+	font-weight: 400;
+	transition: 0.3s;
+}
+tr.srJobListJobEven:hover, tr.srJobListJobOdd:hover {
+	box-shadow: 0 4px 60px 1px rgb(0 0 0 / 7%);
+	border: 2px solid var(--_themes---colours--primary);
+	background-color: transparent;
+}
+tr.srJobListJobEven, tr.srJobListJobOdd {
+	background: var(--_themes---colours--grey);
+	border: 2px solid var(--_themes---colours--grey);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: flex-start;
+	border-radius: 1.6em;
+	overflow: hidden;
+	transition: 0.3s;
+	flex: 1 1 25%;
+	padding: 1.2rem 1.5rem;
+}
+.srJobListJobOdd *, .srJobListJobEven *{
+	order: 2;
+}
+.srJobListDepartment{
+	order: 1;
+	font-size: 0.95rem !important;
+	text-transform: uppercase;
+	color: var(--_themes---colours--neutral-1) !important;
+    font-weight: 700 !important;
+}
+.srJobListPublishedSince{
+	color: var(--_themes---colours--primary);
+	font-size: 1rem;
+	padding-top: 1em;
+	margin-top: auto;
+}
+.srJobList .srJobListJobOdd * {
+	border: none;
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: left;
+	font-weight: 400;
+	transition: 0.3s;
+}
+
+.srJobListJobTitle {
+	font-size: 1.8rem !important;
+	line-height: 1.15;
+	font-weight: 400 !important;
+	color: var(--_themes---colours--primary);
+}
+.srJobListLocation{
+	font-size: 1.05em !important;
+}
+
+.srJobListTypeOfEmployment {
+	width: auto;
+}
+
+.srJobListDepartment {
+	width: auto;
+}
+
+.srJobListLocation {
+	width: auto;
+}
+.srJobListOccupationalArea {
+	width: auto;
+}
+
+.srSearch, .srPages {
+	width: auto;
+	background: rgb(238 238 238 / 0%) none;
+	width: 100%;
+	display: flex;
+	margin-bottom: 2rem;
+}
+.srSearch {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	align-items: center;
+	gap: 0.8rem;
+}
+.srPages {
+	float: right;
+	margin: 0.9rem 0 0 0;
+	padding: 0.9rem;
+}
+.srSearchForm {
+	margin-right: 0.4em;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-grow: 1;
+	gap: 0.4rem;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border: 2px solid var(--_themes---colours--grey);
+    background-color: var(--_themes---colours--white);
+    border-radius: 1em;
+    padding: 0.4em 0.4em 0.4em 1em;
+}
+
+.srSearchInput {
+	display: block;
+    font-size: 0.95em;
+	line-height: 1.2;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+	font-weight: 400;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	border: unset;
+}
+
+.srSearchButton {
+	font-size: 1.05em;
+	border-radius: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	border: 2px solid transparent;
+	background-color: var(--_themes---colours--primary);
+	color: var(--_themes---colours--white);
+	transition: 0.3s;
+	padding: 0.5em 0.8em;
+}
+
+.srSearchButton:hover {
+	filter: brightness(120%);
+}
+
+.srSearchOption {
+	position: relative;
+	margin: 0;
+	flex-wrap: nowrap;
+}
+
+.srSearchOptionText,
+.srPagesText,
+.srFilterRemote {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	border: none;
+	width: auto;
+	height: auto;
+	/* color: #272525; */
+	text-align: center;
+	/* font-family: arial; */
+	font-size: 100%;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.srSearchOptionText,.srFilterRemote {
+	width: auto;
+	text-align: left;
+	line-height: 1.15;
+	font-size: 1.05em;
+	display: flex;
+	align-items: center;
+	padding-top: 0;
+	padding-bottom: 0;
+	gap: 0.4rem;
+}
+.srSearchOptionText {
+	justify-content: center;
+	color: var(--_themes---colours--primary);
+	padding: 0.6rem 0.9rem 0.5rem;
+	border: 1px solid var(--_themes---colours--primary);
+	border-radius: 10em;
+}
+
+.srSearchOptionText:hover {
+	background-color: var(--_themes---colours--primary);
+	color: var(--_themes---colours--white);
+}
+
+.srSearchOptionText:after {
+    content: '';
+	width: 1rem;
+	height: 1.2rem;
+	background-image: url("data:image/svg+xml,%3Csvg width='0.8em' height='0.5em' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 2L6.5 6L2 2' stroke='%23105ae8' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.srSearchOptionText:hover::after {
+	background-image: url("data:image/svg+xml,%3Csvg width='0.8em' height='0.5em' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 2L6.5 6L2 2' stroke='%23fff' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+}
+
+.srSearchOptionList {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    display: none;
+    right: -30%;
+    margin: 0;
+    border-radius: 1em;
+    border-top: none;
+    background: #fff none;
+    z-index: 1;
+	overflow: hidden!important;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: opacity, visibility;
+    transition-delay: 0s;
+    font-weight: 400;
+    color: var(--_themes---colours--neutral-1);
+	filter: drop-shadow(0 0.2em 2em rgba(0, 0, 0, 0.15));
+    width: auto;
+    border: 2px solid transparent;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.srSearchOptionListElement, .srSearchOptionListElementChecked {
+    display: table;
+	margin: 0;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.srSearchOptionListElement:hover {
+    color: var(--_themes---colours--secondary);
+}
+
+.srSearchOptionClearListElement > .srSearchOptionListElementText::before {
+	content: '';
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.6rem' height='1rem' viewBox='0 0 6 10' fill='none'%3E%3Cpath d='M5 9L1 5L5 1' stroke='%230e0a48' stroke-linecap='square'/%3E%3C/svg%3E");
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.8rem;
+	margin-right: 0.5rem;
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.srSearchOptionListElementText {
+    display: table-cell;
+    margin: 0 0 0 8px;
+    padding: 0.5rem;
+    width: max-content;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: middle;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.srSearchOptionListElementChecked > .srSearchOptionListElementText {
+	color: var(--_themes---colours--secondary);
+}
+
+.srPagesText {
+	padding: 3px 8px;
+	cursor: default;
+}
+
+.srPagesTextCenter:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: -8px 0 0 0;
+    padding: 0;
+    width: 0;
+    height: 35px;
+}
+
+.srPagesTextCenter:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    margin: -8px 0 0 0;
+    padding: 0;
+    width: 0;
+    height: 35px;
+}
+
+.srPagesTextPrevious, .srPagesTextNext {
+	cursor: pointer;
+}
+.none {
+	height: 0;
+	border: none;
+}
+
+.srFilterRemote {
+	width: 100%;
+	padding: 0.3rem 0;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--_themes---colours--white);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid currentColor;
+  border-radius: 0.25em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  box-shadow: inset 1em 1em var(--_themes---colours--primary);
+  /* Windows High Contrast Mode */
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.srFilterRemoteElementText {
+	position: relative;
+	padding-left: 0.3em;
+	line-height: 1;
+	margin-bottom: 0;
+	color: var(--_themes---colours--neutral-1);
+	font-size: 0.9em;
+}
+
+.srFilterRemoteElementText:after {
+	position: relative;
+	top: 2px;
+}
+
+.display--none {
+	display: none;
+}
+.srJobListTitles{
+	display: none;
+}
