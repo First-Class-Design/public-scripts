@@ -6,7 +6,7 @@
   // Get the corresponding show buttons for each dialog
   const showButtons = document.querySelectorAll("dialog + button");
   // Get the corresponding close buttons for each dialog
-  const closeButtons = document.querySelectorAll("dialog button");
+  const closeButtons = document.querySelectorAll("dialog .modal_close-button");
 
   // Loop through each dialog and add event listeners
   dialogs.forEach((dialog, index) => {
