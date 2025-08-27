@@ -1,4 +1,3 @@
-
 function timePast(curr, prev) {
     //define the milliseconds in every time unit
     var msMin = 60 * 1000;
@@ -7,7 +6,6 @@ function timePast(curr, prev) {
     var msWeek = msDay * 7;  
     var msMonth = msDay * 30;
     var msYr = msDay * 365;
-
     //get elapsed time in milliseconds
     var elapsed = curr - prev;
 
@@ -57,8 +55,10 @@ function timePast(curr, prev) {
         }
     }
 }
-$('.u-post-date').each(function () {
-    var now = new Date();
-    var parsedTime = Date.parse($(this).text());
-    $(this).text(timePast(now, new Date(parsedTime)));
+$(document).ready(function () {
+    $('.u-post-date').each(function () {
+        var now = new Date();
+        var parsedTime = Date.parse($(this).text());
+        $(this).text(timePast(now, new Date(parsedTime)));
+    });
 });
