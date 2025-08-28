@@ -16,11 +16,11 @@
     }
     else if (elapsed < msWeek) {
         elapsed = Math.round(elapsed/msDay);
-        return pluralize(elapsed, 'week');
+        return pluralize(elapsed, 'day');
     }
     else if (elapsed < msMonth) {
-      elapsed = Math.round(elapsed/msDay);
-      return pluralize(elapsed, 'day'); 
+      elapsed = Math.round(elapsed/msWeek);
+      return pluralize(elapsed, 'week'); 
     }
     else if (elapsed < msYr) {
       elapsed = Math.round(elapsed/msMonth);
