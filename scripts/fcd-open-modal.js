@@ -1,26 +1,46 @@
-// Code copied from MAST Framework by No-Code Supply Co.
-// All rights reserved. https://webflow.com/made-in-webflow/website/mast-framework
+// Created by FIrst Class Design Ltd. Handcrafted with prompts using Gemini AI.
+// Poloyfill
+// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.6/dialog-polyfill.min.css" />
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.6/dialog-polyfill.min.js"></script>
 
-// Get all dialog elements
+// All rights reserved.
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Get all dialog elements
   const dialogs = document.querySelectorAll("dialog");
-  // Get the corresponding show buttons for each dialog
-  const showButtons = document.querySelectorAll("dialog + button");
-  // Get the corresponding close buttons for each dialog
-  const closeButtons = document.querySelectorAll("dialog .modal_close-button");
 
-  // Loop through each dialog and add event listeners
-  dialogs.forEach((dialog, index) => {
-    // "Show the dialog" button opens the dialog modally
-    showButtons[index].addEventListener("click", () => {
-      dialog.showModal();
+  dialogs.forEach((dialog) => {
+    // --- OLD BROWSER SUPPORT ---
+    // Registers the dialog with the polyfill if the browser doesn't support <dialog> natively
+    // Note: You must include the dialog-polyfill CSS and JS in your project for this to work.
+    if (!dialog.showModal && typeof dialogPolyfill !== "undefined") {
+      dialogPolyfill.registerDialog(dialog);
+    }
+
+    // --- OPEN TRIGGER ---
+    // Finds the button immediately following the dialog (matches original "dialog + button" logic)
+    const openBtn = dialog.nextElementSibling;
+    
+    // Check if the next element exists and is actually a button
+    if (openBtn && openBtn.matches("button")) {
+      openBtn.addEventListener("click", () => {
+        dialog.showModal();
+      });
+    }
+
+    // --- CLOSE TRIGGERS (Primary & Secondary) ---
+    // specific selectors for closing buttons INSIDE this specific dialog
+    // You can now add the class .modal_close-secondary to a secondary button (like "Cancel")
+    const closeButtons = dialog.querySelectorAll(".modal_close-button, .modal_close-secondary");
+    
+    closeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        dialog.close();
+      });
     });
 
-    // "Close" button closes the dialog
-    closeButtons[index].addEventListener("click", () => {
-      dialog.close();
-    });
-
-    // Close the dialog when clicking outside of it
+    // --- BACKDROP CLICK ---
+    // Close the dialog when clicking on the backdrop (outside the dialog box)
     dialog.addEventListener("click", (e) => {
       const dialogDimensions = dialog.getBoundingClientRect();
       if (
@@ -33,3 +53,4 @@
       }
     });
   });
+});
