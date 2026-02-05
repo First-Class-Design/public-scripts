@@ -1,9 +1,14 @@
 /** 
  * Webflow Tab Navigation Handler
  * Enables direct linking to specific tabs with optional section anchoring
- * @author FCD
- * @version 1.0.0
+ * 
+ * URL Structure: website.com/page-path?tab=tab-id
+ * Example: website.com/services?tab=consulting-tab
+ * 
+ * Author FCD / BRIX Templates
+ * Version 1.0.1
  */
+
 window.addEventListener('load', function() {
 // Extract URL parameters and location hash
 const urlParameters = new URLSearchParams(window.location.search);
