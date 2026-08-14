@@ -1,12 +1,10 @@
 /** 
  * GSAP Hide Navigation
- * Adds a class to the navbar when scrolling past a certain point on the page.
- * 
- * Class used: .navbar.u-nav-filled
- * Requires <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+ * Adds a class .navbar-hidden to .navbar when scrolling down and removes it when scrolling up.
+ * Supports a sticky navbar where class .sticky-shifted is added to .sticky_navigation that shifts up when scrolling down and shifts back down when scrolling up.
  * 
  * Author FCD x Gemini AI
- * Version 1.0.0
+ * Version 1.0.1
  */
 
 // Check if viewport is desktop size
