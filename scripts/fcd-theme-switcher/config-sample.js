@@ -7,6 +7,6 @@ const themeConfig = {
     defaultPreference: 'system', 
     // Browser width in pixels to detect mobile devices
     mobileBreakpoint: 768, 
-    storageKey: 'theme-preference',
+    storageKey: 'theme-preference', // STRONGLY recommended to keep this unique to your site AND never change it after launch!
     darkClass: 'u-theme-dark'
 };
