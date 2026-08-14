@@ -7,11 +7,6 @@
  * Version 1.0.1
  */
 
-// Check if viewport is desktop size
-function isDesktopView() {
-    return window.innerWidth >= 992; 
-}
-
 gsap.registerPlugin(ScrollTrigger);
 
 let navbarScrollTrigger;
@@ -20,20 +15,20 @@ let navbarScrollTrigger;
 const navbarElement = document.querySelector('.navbar');
 const stickyNavElement = document.querySelector('.sticky_navigation');
 
-// 3. Function to initialize the scroll animation
+// Function to initialize the scroll animation
 function initNavbarScrollAnimation() {
     // Only initialize if we are on desktop AND the trigger doesn't already exist
     if (isDesktopView() && !navbarScrollTrigger && navbarElement) {
-
+        
         // We create a ScrollTrigger that watches the whole page
         navbarScrollTrigger = ScrollTrigger.create({
             start: "top top", // Start tracking immediately
             end: 99999,       // Effectively track the whole page height
-
+            
             // onUpdate fires every time a scroll event happens within the start/end range
             onUpdate: (self) => {
                 // self.direction is 1 for scrolling down, -1 for scrolling up
-
+                
                 if (self.direction === 1) {
                     // Scrolling DOWN: add classes to hide navbar and shift sticky nav
                     navbarElement.classList.add('navbar-hidden');
@@ -48,7 +43,7 @@ function initNavbarScrollAnimation() {
     }
 }
 
-// 4. Function to clean up the animation on smaller screens
+// Function to clean up the animation on smaller screens
 function destroyNavbarScrollAnimation() {
     if (navbarScrollTrigger) {
         // Remove the classes just in case they were applied when resizing occurred
@@ -58,13 +53,13 @@ function destroyNavbarScrollAnimation() {
         if (stickyNavElement) {
             stickyNavElement.classList.remove('sticky-shifted');
         }
-
+        
         navbarScrollTrigger.kill(); // Destroy the ScrollTrigger instance
         navbarScrollTrigger = null; // Reset the variable
     }
 }
 
-// 5. Handle window resize events to turn features on/off responsively
+// Handle window resize events to turn features on/off responsively
 window.addEventListener('resize', () => {
     if (!isDesktopView()) {
         destroyNavbarScrollAnimation();
@@ -73,5 +68,5 @@ window.addEventListener('resize', () => {
     }
 });
 
-// 6. Initial call to set things up when the page loads
+// Initial call to set things up when the page loads
 initNavbarScrollAnimation();
