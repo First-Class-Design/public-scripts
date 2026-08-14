@@ -1,9 +1,16 @@
-// Created by FIrst Class Design Ltd. Handcrafted with prompts using Gemini AI.
-// Poloyfill
-// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.6/dialog-polyfill.min.css" />
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.6/dialog-polyfill.min.js"></script>
+/** 
+ * Open <modal> Dialogs
+ * Controls modal components throughout the site.
+ * 
+ * Polyfill - required for old browser support. Additional CSS may be required for styling the backdrop and dialog box.
+ * <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.6/dialog-polyfill.min.css" />
+ * <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.6/dialog-polyfill.min.js"></script>
+ * 
+ * Author FCD x Gemini AI
+ * Version 1.1.0
+ */
 
-// All rights reserved.
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // Get all dialog elements

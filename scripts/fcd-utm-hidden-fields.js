@@ -1,3 +1,11 @@
+/** 
+ * UTM Capture
+ * Captures UTM parameters from the URL and populates hidden fields in forms on the page.
+ * 
+ * Author FCD
+ * Version 1.0.0
+ */
+
 var queryString = window.location.search;
 console.log(queryString);
 // ?utm_source=XXXXX&utm_medium=post&utm_campaign=yourname&utm_term=keyword,keyword+two&utm_content=text+ad.footer+link

@@ -1,5 +1,10 @@
 /**
- * Light / Dark / System Mode Manager
+ * Theme Switcher
+ * Stores the user's theme preference in local storage and applies it to the page.
+ * Uses .theme_base.u-theme-light and .theme_base.u-theme-dark classes to control the theme.
+ * 
+ * Author FCD x Gemini AI
+ * Version 1.0.0
  */
 const STORAGE_KEY = 'theme-preference';
 const DARK_CLASS = 'u-theme-dark';

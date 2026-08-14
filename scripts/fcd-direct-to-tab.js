@@ -5,7 +5,7 @@
  * URL Structure: website.com/page-path?tab=tab-id
  * Example: website.com/services?tab=consulting-tab
  * 
- * Author FCD / BRIX Templates
+ * Author FCD x BRIX Templates
  * Version 1.0.1
  */
 

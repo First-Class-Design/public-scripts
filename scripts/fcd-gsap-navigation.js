@@ -1,6 +1,15 @@
-// Removes and adds classes to the navbar when transparency is needed.
-// .navbar.u-nav-filled 
-// Requires <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+/** 
+ * GSAP Navigation
+ * Adds a class to the navbar when scrolling past a certain point on the page.
+ * 
+ * Class used: .navbar.u-nav-filled
+ * Requires <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+ * 
+ * Author FCD
+ * Version 1.0.0
+ */
+
+
 
 $("#navbar-default-trigger").each(function (index) { //The first item on the page where the class u-nav-filled is removed.
     ScrollTrigger.create({

@@ -1,4 +1,12 @@
-  // Function to pluralize the time past (eg. minute or minutes / day or days)
+/** 
+ * Post Date Ago
+ * Converts a date to a "time ago" string (e.g., 5 minutes ago, 2 hours ago)
+ * 
+ * Author FCD x Reece Chan
+ * Version 1.0.0
+ */
+
+// Function to pluralize the time past (eg. minute or minutes / day or days)
   const pluralize = (count, noun, suffix = 's') => `${count} ${noun}${count !== 1 ? suffix : ''}`;
 
   const timePast = (curr, prev) => {
@@ -35,7 +43,7 @@
   let now = new Date();
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.u-post-date-ago').forEach(box => {
+    document.querySelectorAll('.u-post-date-ago').forEach(box => { // Class name of the element that contains the date to be converted to "time ago"
         let parsedTime = Date.parse(box.innerText);
         box.innerText = timePast(now, new Date(parsedTime)) + ' ago';
     })

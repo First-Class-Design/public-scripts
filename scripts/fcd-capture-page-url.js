@@ -1,3 +1,12 @@
+/** 
+ * Capture page URL
+ * Captures current URL and populates a hidden field in forms on the page.
+ * 
+ * 
+ * Author FCD
+ * Version 1.0.0
+ */
+
 // Capture Page URL and fill a hidden field
 	document.addEventListener("DOMContentLoaded", function(event) { 
   // get & store the page url in a variable
