@@ -4,7 +4,7 @@
  * Uses .theme_base.u-theme-light and .theme_base.u-theme-dark classes to control the theme.
  * 
  * Author FCD x Gemini AI
- * Version 1.0.1
+ * Version 1.1.0
  */
 
 // 1. Get the current preference from local storage, default to config setting
