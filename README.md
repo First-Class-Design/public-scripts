@@ -14,5 +14,5 @@ A JSON file is exported from Figma - this is normally split into multiple JSON f
 
 ### Theme Switcher
 Versatile dark / light / system colour mode switcher that stores the preference in the users browser.
-- logic-part1.js should go AFTER config.js in the <head>
-- logic-part2.js should go before </body>
+- logic-part1.js should go AFTER config.js in the `<head>`
+- logic-part2.js should go before `</body>`
