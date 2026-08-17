@@ -4,7 +4,7 @@
  * Uses .theme_base.u-theme-light and .theme_base.u-theme-dark classes to control the theme.
  * 
  * Author FCD x Gemini AI
- * Version 1.1.1
+ * Version 1.1.2
  */
 
 
@@ -22,19 +22,12 @@ const applyTheme = (theme) => {
     } else if (theme === 'system') {
     isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-
-    // We use document.documentElement (the <html> tag) if the <body> isn't loaded yet.
-    // But adding it directly to document.body is safe here if placed properly.
-    // In the <head>, document.body might be null, so we use document.documentElement for safety
-    // Alternatively, we can just force the class onto document.documentElement and update CSS.
-    // For Webflow, doing this on the <html> element is actually best practice for theme flashes.
     
-    const targetElement = document.documentElement; // Targets the <html> tag
-
+    // We can safely target document.body now because this script is inside the <body>
     if (isDark) {
-    targetElement.classList.add(themeConfig.darkClass);
+    document.body.classList.add(themeConfig.darkClass);
     } else {
-    targetElement.classList.remove(themeConfig.darkClass);
+    document.body.classList.remove(themeConfig.darkClass);
     }
 };
 
