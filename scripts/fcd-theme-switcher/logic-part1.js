@@ -4,7 +4,7 @@
  * Uses .theme_base.u-theme-light and .theme_base.u-theme-dark classes to control the theme.
  * 
  * Author FCD x Gemini AI
- * Version 1.1.0
+ * Version 1.1.1
  */
 
 
