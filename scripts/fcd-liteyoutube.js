@@ -19,8 +19,7 @@ class LiteYTEmbed extends HTMLElement {
         this.dataset.title = this.getAttribute('title') || "";
 
         /**
-         * Lo, the youtube poster image!  (aka the thumbnail, image placeholder, etc)
-         *
+         * Get YouTube poster image (aka the thumbnail, image placeholder, etc)
          * See https://github.com/paulirish/lite-youtube-embed/blob/master/youtube-thumbnail-urls.md
          */
         if (!this.style.backgroundImage) {
