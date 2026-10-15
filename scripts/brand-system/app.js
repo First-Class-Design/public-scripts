@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logoContainer.addEventListener('contextmenu', (e) => {
         e.preventDefault();
-        contextMenu.style.left = `${e.pageX}px`;
-        contextMenu.style.top = `${e.pageY}px`;
         contextMenu.classList.add('u-menu-open');
     });
 
