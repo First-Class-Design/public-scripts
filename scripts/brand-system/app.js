@@ -1,5 +1,5 @@
 // FCD Brand Framework
-// Version 2.1.1
+// Version 2.1.2
 // Description: Adds parser for Figma JSON color modes (usually dark.json and light.json) and renders them in a grid with copyable HEX values. Also adds context menu for logo with copy/download options.
 
 // Container IDs to use: colors-container, downloads-container
